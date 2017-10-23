@@ -1,28 +1,121 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <groupId>TestYo</groupId>
+    <artifactId>Log</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>TestAspects</name>
+    <properties>
+        <java-version>1.7</java-version>
+        <org.springframework-version>4.0.4.RELEASE</org.springframework-version>
+        <org.aspectj-version>1.6.10</org.aspectj-version>
+        <org.slf4j-version>1.6.6</org.slf4j-version>
+        <log4j.configuration>src/main/resources/log4j.properties</log4j.configuration>
+    </properties>
 
-    <groupId>com.sergey</groupId>
-    <artifactId>tryToUse</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>com.jcabi</groupId>
+            <artifactId>jcabi-aspects</artifactId>
+            <version>0.20.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>1.6.12</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- Logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${org.slf4j-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>${org.slf4j-version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${org.slf4j-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.11</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-api</artifactId>
+            <version>3.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-firefox-driver</artifactId>
+            <version>3.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>3.4.0</version>
+        </dependency>
+
+    </dependencies>
+
+
     <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <targetPath>${project.build.directory}</targetPath>
+                <includes>
+                    <include>log4j.properties</include>
+                </includes>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
-                <!-- Build an executable JAR -->
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>2.4</version>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>aspectj-maven-plugin</artifactId>
+                <version>1.4</version>
                 <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>tryToUse.runAppViaJava</mainClass>
-                        </manifest>
-                    </archive>
+                    <complianceLevel>1.6</complianceLevel>
+                    <!-- <encoding>${project.build.sourceEncoding}</encoding> -->
+                    <showWeaveInfo>true</showWeaveInfo>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <verbose>true</verbose>
+                    <aspectLibraries>
+                        <aspectLibrary>
+                            <groupId>com.jcabi</groupId>
+                            <artifactId>jcabi-aspects</artifactId>
+                        </aspectLibrary>
+                    </aspectLibraries>
                 </configuration>
+                <executions>
+                    <execution>
+                        <id>weave-classes</id>
+                        <phase>process-classes</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
-
 </project>

@@ -1,0 +1,57 @@
+16:14:34  WARN [main] - devpinoyLogger.test - START
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.client.protocol.RequestAddCookies.process - CookieSpec selected: default
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.client.protocol.RequestAuthCache.process - Auth cache not set in the context
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.impl.conn.PoolingHttpClientConnectionManager.requestConnection - Connection request: [route: {}->http://localhost:24747][total kept alive: 0; route allocated: 0 of 2000; total allocated: 0 of 2000]
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.impl.conn.PoolingHttpClientConnectionManager.leaseConnection - Connection leased: [id: 0][route: {}->http://localhost:24747][total kept alive: 0; route allocated: 1 of 2000; total allocated: 1 of 2000]
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.impl.execchain.MainClientExec.execute - Opening connection {}->http://localhost:24747
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect - Connecting to localhost/127.0.0.1:24747
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect - Connection established 127.0.0.1:28244<->127.0.0.1:24747
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.impl.conn.DefaultManagedHttpClientConnection.setSocketTimeout - http-outgoing-0: set socket timeout to 10800000
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.impl.execchain.MainClientExec.execute - Executing request POST /session HTTP/1.1
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.impl.execchain.MainClientExec.execute - Target auth state: UNCHALLENGED
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.impl.execchain.MainClientExec.execute - Proxy auth state: UNCHALLENGED
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.headers.onRequestSubmitted - http-outgoing-0 >> POST /session HTTP/1.1
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.headers.onRequestSubmitted - http-outgoing-0 >> Content-Type: application/json; charset=utf-8
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.headers.onRequestSubmitted - http-outgoing-0 >> Content-Length: 550
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.headers.onRequestSubmitted - http-outgoing-0 >> Host: localhost:24747
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.headers.onRequestSubmitted - http-outgoing-0 >> Connection: Keep-Alive
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.headers.onRequestSubmitted - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_131)
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.headers.onRequestSubmitted - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "POST /session HTTP/1.1[\r][\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "Content-Type: application/json; charset=utf-8[\r][\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "Content-Length: 550[\r][\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "Host: localhost:24747[\r][\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.3 (Java/1.8.0_131)[\r][\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "[\r][\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "{[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "  "desiredCapabilities": {[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "    "browserName": "chrome",[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "    "chromeOptions": {[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "      "args": [],[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "      "extensions": [][\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "    },[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "    "version": "",[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "    "platform": "ANY"[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "  },[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "  "requiredCapabilities": {},[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "  "capabilities": {[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "    "desiredCapabilities": {[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "      "browserName": "chrome",[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "      "chromeOptions": {[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "        "args": [],[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "        "extensions": [][\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "      },[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "      "version": "",[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "      "platform": "ANY"[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "    },[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "    "requiredCapabilities": {},[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "    "alwaysMatch": {},[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "    "firstMatch": [[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "      {[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "        "browserName": "chrome"[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "      }[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "    ][\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "  }[\n]"
+16:14:35 DEBUG [Forwarding newSession on session null to remote] - org.apache.http.wire.wire - http-outgoing-0 >> "}"
